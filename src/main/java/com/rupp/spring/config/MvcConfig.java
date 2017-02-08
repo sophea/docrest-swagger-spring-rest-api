@@ -1,6 +1,8 @@
 package com.rupp.spring.config;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
@@ -19,6 +21,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -76,17 +81,30 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 //    }
     
     //<bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"></bean>
-    @Bean("swagger2Config")
-    public Swagger2DocumentationConfiguration getSwagger2DocumentationConfiguration() {
-        return new Swagger2DocumentationConfiguration();
-    }
+//    @Bean("swagger2Config")
+//    public Swagger2DocumentationConfiguration getSwagger2DocumentationConfiguration() {
+//        return new Swagger2DocumentationConfiguration();
+//    }
     
     @Bean
     public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
+        return new Docket(DocumentationType.SWAGGER_2)
+           .apiInfo(getApiInfoForVersion("1"))
           .select()                                  
           .apis(RequestHandlerSelectors.any())
           .paths(PathSelectors.any())
-          .build().pathMapping("/api");
+          .build().pathMapping("/api")
+          //.securitySchemes(Arrays.asList(apiKey())
+                  ;
+    }
+    
+//    private ApiKey apiKey() {
+//        return new ApiKey("mykey", "api_key", "header");
+//    }
+    
+    private ApiInfo getApiInfoForVersion(String version) {
+        Contact defaultContact = new Contact("Company", "https://github.com/sophea/docrest-swagger-spring-rest-api", "");
+        return new ApiInfo("Version " + version, "Api Documentation", version, "urn:tos",
+            defaultContact, "Restricted usage", "https://github.com/sophea/docrest-swagger-spring-rest-api");
     }
 }
