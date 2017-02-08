@@ -6,10 +6,9 @@ mvn jetty:run
 
 # Swagger rest-api documentation
 
-** rest api page : http://localhost:8080/api/swagger-ui.html#/
-** rest api return as json form: http://localhost:8080/api/v2/api-docs
-
-** maven dependency
+**rest api page : http://localhost:8080/api/swagger-ui.html#/
+**rest api return as json form: http://localhost:8080/api/v2/api-docs
+**maven dependency
 ```
 <dependencies>
     <dependency>
@@ -25,7 +24,7 @@ mvn jetty:run
   </dependency>     
 ```
 
-** MvcConfig.java
+**MvcConfig.java
 ```
 
 @EnableWebMvc //mvc:annotation-driven
@@ -61,7 +60,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 }
 ```
 
-** Controller sample code
+**Controller sample code
 
 ```
 
@@ -111,6 +110,8 @@ public class CategoryController {
 
    ....
 ```
+more detail : https://springfox.github.io/springfox/docs/snapshot/#introduction
+
 
 # CRUD REST-APIs :
 
