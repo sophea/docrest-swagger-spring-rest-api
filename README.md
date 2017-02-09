@@ -38,19 +38,12 @@ The results are generated into target/asciidoc/html and target/asciidoc/pdf
       <artifactId>springfox-swagger2</artifactId>
       <version>2.6.1</version>
     </dependency>
-
+    
     <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-staticdocs</artifactId>
-      <version>2.6.1</version>
-      <scope>test</scope>
+     <groupId>io.springfox</groupId>
+     <artifactId>springfox-swagger-ui</artifactId>
+     <version>2.6.1</version>
     </dependency>
-        
-    <dependency>
-   <groupId>io.springfox</groupId>
-   <artifactId>springfox-swagger-ui</artifactId>
-   <version>2.6.1</version>
-  </dependency>
   
   <dependency>
       <groupId>org.springframework</groupId>
@@ -58,7 +51,12 @@ The results are generated into target/asciidoc/html and target/asciidoc/pdf
       <version>${spring.version}</version>
       <scope>test</scope>
    </dependency>
-        
+  <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>      
 ```
 
 * MvcConfig.java
@@ -182,7 +180,12 @@ public class CategoryController {
    ....
 ```
 
-* more detail : https://springfox.github.io/springfox/docs/snapshot/#introduction
+* For more detail : 
+
+https://github.com/Swagger2Markup/spring-swagger2markup-demo
+
+https://springfox.github.io/springfox/docs/snapshot/#introduction
+
 
 
 # CRUD REST-APIs :
