@@ -1,28 +1,64 @@
 # Spring REST-API with swagger rest documentation :
 
-Start jetty server with maven
+
+
+This project is about generating rest-api documentation with swagger-ui using springfox-swagger2 and asciidoctor library.
+
+The demo shows how to generate static docs (HTML5 and PDF) with the asciidoctor-maven-plugin and rest-api documentation page with swagger-ui tool.
+
+
+# Start jetty server with maven
 
 mvn jetty:run
 
-# Swagger rest-api documentation
+# Swagger rest-api UI
 
 * rest api page : http://localhost:8080/api/swagger-ui.html#/
 * rest api return as json form: http://localhost:8080/api/v2/api-docs
-* maven dependency
+
+# generrate swagger documentation as html/pdf format using Asciidoctor maven plug-in 
+
+To generate html/pdf mvn use maven command below
+
+```
+mvn clean test
+```
+
+The results are generated into target/asciidoc/html and target/asciidoc/pdf
+
+
+
+
+# maven dependency
 
 ```
 <dependencies>
     <dependency>
-     <groupId>io.springfox</groupId>
-     <artifactId>springfox-swagger2</artifactId>
-     <version>2.4.0</version>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.6.1</version>
     </dependency>
-    
-<dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-staticdocs</artifactId>
+      <version>2.6.1</version>
+      <scope>test</scope>
+    </dependency>
+        
+    <dependency>
    <groupId>io.springfox</groupId>
    <artifactId>springfox-swagger-ui</artifactId>
-   <version>2.4.0</version>
-  </dependency>     
+   <version>2.6.1</version>
+  </dependency>
+  
+  <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+   </dependency>
+        
 ```
 
 * MvcConfig.java
