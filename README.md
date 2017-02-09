@@ -16,7 +16,7 @@ mvn jetty:run
 * rest api page : http://localhost:8080/api/swagger-ui.html#/
 * rest api return as json form: http://localhost:8080/api/v2/api-docs
 
-# generrate swagger documentation as html/pdf format using Asciidoctor maven plug-in 
+# Generate swagger documentation as html/pdf format using Asciidoctor maven plug-in 
 
 To generate html/pdf mvn use maven command below
 
