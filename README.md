@@ -24,7 +24,9 @@ To generate html/pdf mvn use maven command below
 mvn clean test
 ```
 
-The results are generated into target/asciidoc/html and target/asciidoc/pdf
+The results are generated into target/asciidoc/html and target/asciidoc/pdf : 
+
+see index.html file [https://github.com/sophea/docrest-swagger-spring-rest-api/blob/master/asciidoc/html/index.html]
 
 see sample.pdf file [https://github.com/sophea/docrest-swagger-spring-rest-api/blob/master/asciidoc/pdf/sample-doc.pdf]
 
