@@ -26,9 +26,9 @@ mvn clean test
 
 The results are generated into target/asciidoc/html and target/asciidoc/pdf : 
 
-see index.html file [https://github.com/sophea/docrest-swagger-spring-rest-api/blob/master/asciidoc/html/index.html]
+see index.html file [https://htmlpreview.github.io/?https://github.com/sophea/docrest-swagger-spring-rest-api/blob/master/asciidoc/html/index.html]
 
-see sample.pdf file [https://github.com/sophea/docrest-swagger-spring-rest-api/blob/master/asciidoc/pdf/sample-doc.pdf]
+see sample.pdf file [https://github.com/sophea/docrest-swagger-spring-rest-api/blob/master/asciidoc/pdf/sample-doc.pdf?raw=true]
 
 
 # maven dependency
