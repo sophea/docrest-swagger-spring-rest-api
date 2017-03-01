@@ -90,7 +90,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
           .apis(RequestHandlerSelectors.any())
           .paths(PathSelectors.any())
           .build()
-          //.pathMapping("/api")
+         // .pathMapping("api")
           //.securitySchemes(Arrays.asList(apiKey())
                   ;
     }
@@ -101,7 +101,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     
     private ApiInfo getApiInfoForVersion(String version) {
         Contact defaultContact = new Contact("Company", "https://github.com/sophea/docrest-swagger-spring-rest-api", "");
-        return new ApiInfo("Version " + version, "Api Documentation", version, "urn:tos",
+        return new ApiInfo("Version " + version, "Api Documentation. Each REST-API Request must start with /api. ", version, "urn:tos",
             defaultContact, "Restricted usage", "https://github.com/sophea/docrest-swagger-spring-rest-api");
     }
 }

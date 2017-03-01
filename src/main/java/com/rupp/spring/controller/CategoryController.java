@@ -33,7 +33,7 @@ import com.rupp.spring.domain.ResponseList;
 import com.rupp.spring.service.CategoryService;
 
 @Controller
-@RequestMapping(value = "categories", produces = { MediaType.APPLICATION_JSON_VALUE} )
+@RequestMapping(value = "/categories", produces = { MediaType.APPLICATION_JSON_VALUE} )
 @Api(tags = "categories", description = "Category apis")
 public class CategoryController {
     private static final Logger logger = LoggerFactory.getLogger(CategoryController.class);
