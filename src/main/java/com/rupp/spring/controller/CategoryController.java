@@ -2,9 +2,6 @@ package com.rupp.spring.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.Example;
-import io.swagger.annotations.ExampleProperty;
-import io.swagger.annotations.ExternalDocs;
 
 import java.util.HashMap;
 import java.util.List;

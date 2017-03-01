@@ -89,7 +89,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
           .select()                                  
           .apis(RequestHandlerSelectors.any())
           .paths(PathSelectors.any())
-          .build().pathMapping("/api")
+          .build()
+          //.pathMapping("/api")
           //.securitySchemes(Arrays.asList(apiKey())
                   ;
     }
